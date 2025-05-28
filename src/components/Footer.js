@@ -50,7 +50,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="mt-10 border-t border-white/20 pt-4 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} NEXTRONIX. All rights reserved.
+        © {new Date().getFullYear()} Manit PVT LTD. All rights reserved.
       </div>
     </footer>
   );

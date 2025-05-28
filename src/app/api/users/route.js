@@ -26,7 +26,7 @@ export async function GET(request) {
 
 //creating a new user(sign up page)
 export async function POST(request) {
-  const { name, email, password, about } = await request.json();
+  const { name, email, password, about, profileUrl } = await request.json();
 
   try {
     // Check if a user with the same name or email already exists
@@ -45,7 +45,8 @@ export async function POST(request) {
       name,
       email,
       password,
-      about
+      about,
+      profileUrl
     });
 
     newUser.password = await bcrypt.hash(newUser.password, parseInt(process.env.BCRYPT_SALT));

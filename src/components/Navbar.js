@@ -53,7 +53,7 @@ const Navbar = () => {
                 <>
                   <Link href="/profile/user" className="flex items-center space-x-2 bg-cyan-500 text-white py-2 px-4 rounded-full hover:bg-cyan-400 transition">
                     <img
-                      src={actualUser.ProfileUrl}
+                      src={actualUser.profileUrl}
                       alt="Profile"
                       className="w-8 h-8 rounded-full object-cover"
                     />

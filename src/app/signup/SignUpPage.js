@@ -13,13 +13,13 @@ const SignUp = () => {
     email: '',
     password: '',
     about: '',
-    profileURL: ''
+    profileUrl: ''
   });
 
 
   const validateForm = () => {
-    const { username, email, password, about } = formData;
-    if (!username.trim() || !email.trim() || !password.trim() || !about.trim()) {
+    const { username, email, password, about, profileUrl } = formData;
+    if (!username.trim() || !email.trim() || !password.trim() || !about.trim() || !profileUrl.trim()) {
       toast.error('Please fill in all fields.');
       return false;
     }
@@ -39,7 +39,7 @@ const SignUp = () => {
         email: formData.email,
         password: formData.password,
         about: formData.about,
-        profileURL: formData.profileURL
+        profileUrl: formData.profileUrl
       });
       if (res.status === 200) {
         toast.success('Signed up successfully!');
@@ -48,7 +48,7 @@ const SignUp = () => {
           email: '',
           password: '',
           about: '',
-          profileURL: ''
+          profileUrl: ''
         });
       } else {
         toast.error('Failed to sign up.');
@@ -69,7 +69,8 @@ const SignUp = () => {
       username: '',
       email: '',
       password: '',
-      about: ''
+      about: '',
+      profileUrl: ''
     });
     toast.info('Form reset.');
   };
@@ -143,9 +144,9 @@ const SignUp = () => {
                 <input
                   type="text"
                   name="profileURL"
-                  value={formData.profileURL}
+                  value={formData.profileUrl}
                   onChange={(e) => {
-                    setFormData({ ...formData, profileURL: e.target.value });
+                    setFormData({ ...formData, profileUrl: e.target.value });
                   }}
                   className="w-full p-2.5 rounded-md bg-gray-800 border border-blue-500 focus:ring-blue-400 focus:outline-none"/>
               </div>
